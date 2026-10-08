@@ -40,7 +40,7 @@
 <main>
 
 <h1>PulseBlocker Privacy Policy</h1>
-<p class="meta">Effective 23 September 2026 · Applies to the PulseBlocker app for Android</p>
+<p class="meta">Effective 8 October 2026 · Applies to the PulseBlocker app for Android</p>
 
 <p>PulseBlocker helps you block distracting apps and websites, run focus sessions and understand
 how you use your phone. This policy explains what data the app handles, where it goes, and the
@@ -76,8 +76,9 @@ open, the address shown in your browser's address bar, whether a short-video fee
 YouTube Shorts, Instagram Reels, TikTok or Facebook Reels) is on screen, and scrolling activity
 for scroll limits. It also uses this permission to block split-screen and floating windows when
 you ask it to. This information is used the moment it is read and is not stored or sent
-anywhere. PulseBlocker does not use the Accessibility Service to read what you type, your
-passwords or the content of your messages.</p>
+anywhere, apart from the YouTube details described under YouTube University below. PulseBlocker
+does not use the Accessibility Service to read what you type, your passwords or the content of
+your messages.</p>
 
 <h3>Screenshots for the optional image shield</h3>
 <p>If you turn on the AI image shield in Adult Block, the app briefly captures what is on
@@ -90,6 +91,21 @@ your device.</p>
 order to silence the ones you've chosen. The app name, title and text of silenced notifications
 are kept on your phone so you can review them later in the digest. They are never uploaded.
 Only a daily count of silenced notifications is synced if you have an account.</p>
+
+<h3>YouTube University</h3>
+<p>If you turn on YouTube University, PulseBlocker checks whether the YouTube videos you watch are
+educational. To do that, it reads the title and channel name of the video playing in the YouTube
+app from YouTube's playback controls, which needs notification access. It also reads the titles,
+channel names and lengths shown on the video cards in YouTube's feeds, to stop previews of videos
+that aren't educational and, if you choose, to blur their thumbnails. For a YouTube video opened
+in your browser, it reads the video's address. It then asks YouTube which category each video is
+filed under (section 4).</p>
+<p>So that each video is looked up only once, what PulseBlocker has learned about the videos and
+channels it checked, such as their titles, channel names and categories, is kept on your phone.
+That list never leaves your phone. YouTube University also keeps a short log of what it decided:
+for example, whether a video was found to be educational, how that was worked out, and any error
+YouTube returned. The log never contains video titles or channel names, and each entry is deleted
+after three days. It leaves your phone only with a problem report (section 5).</p>
 
 <h3>Location and Wi-Fi</h3>
 <p>If you set up a location trigger, the places you choose are stored on your phone. Android
@@ -158,6 +174,11 @@ and each handles it under its own privacy policy.</p>
 <table>
   <tr><th>Service</th><th>When it's used</th><th>What it receives</th></tr>
   <tr>
+    <td><a href="https://supabase.com/privacy">Supabase</a> (our own server)</td>
+    <td>When you have an account</td>
+    <td>The account and sync data in section 3</td>
+  </tr>
+  <tr>
     <td><a href="https://sentry.io/privacy/">Sentry</a></td>
     <td>When you send a problem report, and when the app crashes</td>
     <td>See section 5</td>
@@ -168,6 +189,13 @@ and each handles it under its own privacy policy.</p>
         location trigger</td>
     <td>Your Google account details during sign-in; the map area you're viewing and the place
         you pick</td>
+  </tr>
+  <tr>
+    <td><a href="https://policies.google.com/privacy">Google</a>, through YouTube API Services</td>
+    <td>When YouTube University checks a video</td>
+    <td>The video's title and channel name as the YouTube app shows them, or the video's ID for a
+        video opened in your browser; your phone's language; and, as with any web request, your
+        IP address. No account details: PulseBlocker doesn't sign in to YouTube.</td>
   </tr>
   <tr>
     <td><a href="https://privacy.microsoft.com/privacystatement">Microsoft</a></td>
@@ -190,6 +218,15 @@ and each handles it under its own privacy policy.</p>
 </table>
 </div>
 
+<h3>About YouTube University and YouTube API Services</h3>
+<p>YouTube University uses YouTube API Services to find out how YouTube categorises a video. By
+using YouTube University, you agree to be bound by the
+<a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. How Google handles what it
+receives is described in the <a href="https://policies.google.com/privacy">Google Privacy
+Policy</a>. PulseBlocker doesn't use your YouTube or Google account for this. Turning YouTube
+University off stops the lookups. The details kept on your phone are removed when you clear the
+app's data or uninstall it.</p>
+
 <h3>About the DNS protection VPN</h3>
 <p>When you turn on DNS protection, Android asks you to approve a VPN connection. PulseBlocker
 uses it only to send your phone's DNS lookups (the step that turns a website name into an
@@ -203,6 +240,10 @@ isn't seen or inspected by PulseBlocker. We never receive your DNS lookups.</p>
   <li>what you write;</li>
   <li>any photos, videos or voice notes you choose to attach;</li>
   <li>your phone's model and Android version;</li>
+  <li>for a bug report or a request for help (not a feature request), YouTube University's log
+      from the three days before you wrote it, if YouTube University was on in that time
+      (section 1). It says what was decided about each video and why, never which videos they
+      were;</li>
   <li>if you are signed in, your account ID, email address and username, so we can reply to you.</li>
 </ul>
 <p>Guests' reports carry no account information.</p>
@@ -219,7 +260,7 @@ longer than 90 days.</p>
   <tr><td>Accessibility Service</td><td>To detect the app, website or short-video feed on screen and block it (section 1)</td></tr>
   <tr><td>Usage Access</td><td>To measure screen time and enforce usage limits</td></tr>
   <tr><td>Display over other apps</td><td>To show the block screen on top of a blocked app</td></tr>
-  <tr><td>Notification access</td><td>To silence notifications from apps you block</td></tr>
+  <tr><td>Notification access</td><td>To silence notifications from apps you block, and for YouTube University, to see which video the YouTube app is playing (section 1)</td></tr>
   <tr><td>VPN</td><td>For the optional DNS protection (section 4)</td></tr>
   <tr><td>Location, including background location</td><td>For the optional location triggers</td></tr>
   <tr><td>Nearby Wi-Fi devices / Wi-Fi state</td><td>For the optional Wi-Fi triggers</td></tr>
@@ -242,7 +283,8 @@ longer than 90 days.</p>
   <li><strong>Account and synced data</strong>: until you delete your account.</li>
   <li><strong>Problem reports and crash reports</strong>: up to 90 days.</li>
   <li><strong>Data on your phone</strong>: until you delete it in the app, clear the app's data or
-      uninstall PulseBlocker.</li>
+      uninstall PulseBlocker. The exception is YouTube University's log, whose entries are deleted
+      after three days.</li>
 </ul>
 
 <h2>9. Deleting your account and data</h2>
