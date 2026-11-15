@@ -40,7 +40,7 @@
 <main>
 
 <h1>PulseBlocker Privacy Policy</h1>
-<p class="meta">Effective 8 October 2026 · Applies to the PulseBlocker app for Android</p>
+<p class="meta">Effective 12 November 2026 · Applies to the PulseBlocker app for Android</p>
 
 <p>PulseBlocker helps you block distracting apps and websites, run focus sessions and understand
 how you use your phone. This policy explains what data the app handles, where it goes, and the
@@ -74,17 +74,21 @@ decide when to block. If you have an account, a daily summary is synced (section
 website is in front of you so it can block it. With this permission the app reads which app is
 open, the address shown in your browser's address bar, whether a short-video feed (such as
 YouTube Shorts, Instagram Reels, TikTok or Facebook Reels) is on screen, and scrolling activity
-for scroll limits. It also uses this permission to block split-screen and floating windows when
-you ask it to. This information is used the moment it is read and is not stored or sent
-anywhere, apart from the YouTube details described under YouTube University below. PulseBlocker
-does not use the Accessibility Service to read what you type, your passwords or the content of
-your messages.</p>
+for scroll limits and the BrainRot counter. In a browser it also reads the title of the page and
+the text on screen, to block adult content (see Adult content blocking below). It also uses this permission to block split-screen and
+floating windows when you ask it to. If you turn on Block Uninstall, it also checks pages in Android's
+Settings for PulseBlocker's name, so that it can cover PulseBlocker's own pages there until you enter
+your code. This information is used the moment it is read and is not
+stored or sent anywhere, apart from the number described under BrainRot counter and the YouTube
+details described under YouTube University below. PulseBlocker does not use the Accessibility
+Service to read what you type, your passwords or the content of your messages.</p>
 
-<h3>Screenshots for the optional image shield</h3>
-<p>If you turn on the AI image shield in Adult Block, the app briefly captures what is on
-screen and checks it for explicit imagery with a model that runs entirely on your phone. The
-capture is analysed in memory and discarded straight away. It is never saved and never leaves
-your device.</p>
+<h3>BrainRot counter</h3>
+<p>Unless you turn it off in Settings, PulseBlocker counts the short videos you watch and shows
+today's number on top of the feed. To do that, it notices when the video filling the screen
+changes, without reading what the video is or who posted it. For a feed open in your browser, it
+compares the address of each video, which it doesn't keep. All that is kept is today's number and
+the date, on your phone. They are never synced or sent anywhere.</p>
 
 <h3>Notifications</h3>
 <p>If you choose to block notifications, PulseBlocker reads notifications as they arrive in
@@ -124,8 +128,9 @@ your phone.</p>
 problem report. It never listens at any other time.</p>
 
 <h2>2. Using PulseBlocker without an account</h2>
-<p>Every feature works without an account. As a guest, the data described in sections 1 and 3
-stays on your phone. Only the services in section 4 are contacted, and only when you use the
+<p>Every feature works without an account, except the Block Setting Changes and Block Uninstall
+locks, whose recovery code is saved to your account (section 3). As a guest, the data described in
+sections 1 and 3 stays on your phone. Only the services in section 4 are contacted, and only when you use the
 features that need them.</p>
 
 <h2>3. If you create an account</h2>
@@ -167,6 +172,14 @@ Access to it is restricted so that your account can read and change only its own
 it only to provide the sync and history features. We don't use it for advertising or share it
 with anyone else.</p>
 
+<h3>Your lock code</h3>
+<p>If you turn on Block Setting Changes or Block Uninstall, PulseBlocker generates a code and saves
+it on our server with your account and your phone's model. It is stored in readable form so that
+the PulseBlocker team can give it back to you if you forget it and write to us from the email
+address on your account. The app can't read it back from the server, and we use it for nothing
+else. It is deleted when you turn both locks off on that phone, or when you delete your account.
+Your phone keeps only a scrambled copy, which it uses to check the code you enter.</p>
+
 <h2>4. Services we use</h2>
 <p>PulseBlocker relies on the following services. Each receives only what is described here,
 and each handles it under its own privacy policy.</p>
@@ -203,14 +216,6 @@ and each handles it under its own privacy policy.</p>
     <td>Your Microsoft account details during sign-in</td>
   </tr>
   <tr>
-    <td>The filtering DNS provider you choose:
-        <a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/">Cloudflare for Families</a>,
-        <a href="https://cleanbrowsing.org/privacy">CleanBrowsing</a> or
-        <a href="https://adguard-dns.io/en/privacy.html">AdGuard DNS</a></td>
-    <td>Only while you have Adult Block's DNS protection turned on</td>
-    <td>The website domain names your phone looks up, and your IP address</td>
-  </tr>
-  <tr>
     <td><a href="https://www.dicebear.com/legal/privacy-policy/">DiceBear</a></td>
     <td>Showing the preset avatar pictures</td>
     <td>A standard web request (your IP address); no personal data from the app</td>
@@ -226,13 +231,6 @@ receives is described in the <a href="https://policies.google.com/privacy">Googl
 Policy</a>. PulseBlocker doesn't use your YouTube or Google account for this. Turning YouTube
 University off stops the lookups. The details kept on your phone are removed when you clear the
 app's data or uninstall it.</p>
-
-<h3>About the DNS protection VPN</h3>
-<p>When you turn on DNS protection, Android asks you to approve a VPN connection. PulseBlocker
-uses it only to send your phone's DNS lookups (the step that turns a website name into an
-address) to the filtering provider you chose, which declines to look up adult sites. Only DNS
-lookups pass through it. The rest of your internet traffic doesn't go through the VPN and
-isn't seen or inspected by PulseBlocker. We never receive your DNS lookups.</p>
 
 <h2>5. Problem reports and crash reports</h2>
 <p><strong>Problem reports.</strong> When you send a report from the app's Support page, we receive:</p>
@@ -255,13 +253,26 @@ longer than 90 days.</p>
 
 <h2>6. Permissions and why they're needed</h2>
 <div class="table-wrap">
+<h3>Adult content blocking</h3>
+<p>PulseBlocker blocks adult websites in your browser. This is always on and can't be switched
+off. To do it, the app checks the address of each page against a list of adult sites that is
+stored inside the app, and reads the page's title and the text on screen to recognise adult
+sites that aren't on the list. On a page of search results it reads the results on screen, so it
+can cover the ones that lead to adult sites, and it hides the results of a search for adult
+material. It doesn't read what you type into a page.</p>
+<p>All of this happens on your phone. The addresses, titles and text are used the moment they are
+read and are not stored or sent anywhere. While the app is running it remembers, in memory only,
+which sites and searches it found to be adult, so that it can block them at once the next time;
+that is forgotten when the app stops. Your block history records that adult content was blocked
+and when, under the single name "Adult content". It never records which site or what search.</p>
+
 <table>
   <tr><th>Permission</th><th>Why PulseBlocker asks for it</th></tr>
-  <tr><td>Accessibility Service</td><td>To detect the app, website or short-video feed on screen and block it (section 1)</td></tr>
+  <tr><td>Accessibility Service</td><td>To detect the app, website or short-video feed on screen and block it, to block adult content in your browser, to count short videos for the BrainRot counter, and while Block Uninstall is on, to cover PulseBlocker's own pages in Android's Settings (section 1)</td></tr>
   <tr><td>Usage Access</td><td>To measure screen time and enforce usage limits</td></tr>
   <tr><td>Display over other apps</td><td>To show the block screen on top of a blocked app</td></tr>
   <tr><td>Notification access</td><td>To silence notifications from apps you block, and for YouTube University, to see which video the YouTube app is playing (section 1)</td></tr>
-  <tr><td>VPN</td><td>For the optional DNS protection (section 4)</td></tr>
+  <tr><td>Device admin</td><td>Only for the optional Block Uninstall lock, so that Android won't uninstall PulseBlocker while it is on. It isn't used for anything else: it can't read, erase or change anything on your phone</td></tr>
   <tr><td>Location, including background location</td><td>For the optional location triggers</td></tr>
   <tr><td>Nearby Wi-Fi devices / Wi-Fi state</td><td>For the optional Wi-Fi triggers</td></tr>
   <tr><td>Query installed apps</td><td>To list your apps so you can choose which to block</td></tr>
@@ -281,6 +292,8 @@ longer than 90 days.</p>
 <h2>8. How long we keep data</h2>
 <ul>
   <li><strong>Account and synced data</strong>: until you delete your account.</li>
+  <li><strong>Your lock code</strong>: until you turn both locks off on that phone or delete your
+      account.</li>
   <li><strong>Problem reports and crash reports</strong>: up to 90 days.</li>
   <li><strong>Data on your phone</strong>: until you delete it in the app, clear the app's data or
       uninstall PulseBlocker. The exception is YouTube University's log, whose entries are deleted
@@ -291,7 +304,7 @@ longer than 90 days.</p>
 <p><strong>In the app:</strong> on the Home screen, tap your profile picture in the top-right
 corner to open Account, then tap Delete account. This permanently deletes
 your account and all the data synced to it: your profile, focus subjects and sessions, daily usage,
-per-app usage and settings. It takes effect immediately. Data stored only on your phone is not
+per-app usage, settings and any lock code. It takes effect immediately. Data stored only on your phone is not
 touched, and the app keeps working without an account. To remove that too, clear the app's data
 or uninstall it.</p>
 <p><strong>Without the app:</strong> if you no longer have the app installed, follow the steps on
